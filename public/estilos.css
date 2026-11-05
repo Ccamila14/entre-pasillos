@@ -1,0 +1,674 @@
+/* =========================================
+   ENTRE PASILLOS - ESTILOS GENERALES
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --crema: #F7F3EB;
+    --verde: #285B46;
+    --verde-oscuro: #1D4434;
+    --verde-claro: #E6EDE5;
+    --terracota: #B87958;
+    --beige: #D9C8AE;
+    --texto: #303B34;
+    --texto-suave: #70766F;
+    --blanco: #FFFFFF;
+    --borde: #E8E1D5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--crema);
+    color: var(--texto);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+header {
+    background-color: var(--blanco);
+    padding: 35px;
+}
+
+header h1 {
+    color: var(--verde);
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+header p {
+    margin-top: 10px;
+    color: var(--texto-suave);
+}
+
+.encabezado {
+    background-color: var(--blanco);
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--borde);
+    box-shadow: 0 3px 15px rgba(48, 59, 52, 0.04);
+}
+
+.marca {
+    text-align: left;
+}
+
+.marca h1 {
+    color: var(--verde);
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.marca p {
+    color: var(--terracota);
+    font-size: 12px;
+    margin-top: 3px;
+    letter-spacing: 1px;
+}
+
+.encabezado nav {
+    display: flex;
+    gap: 28px;
+}
+
+.encabezado nav a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.encabezado nav a:hover,
+.encabezado nav a.activo {
+    color: var(--terracota);
+    font-weight: bold;
+}
+
+/* =========================================
+   TITULOS Y BOTONES GENERALES
+   ========================================= */
+
+main {
+    padding: 100px 20px;
+}
+
+main h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--verde);
+    color: var(--blanco);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(40, 91, 70, 0.15);
+}
+
+.boton:hover {
+    background-color: var(--verde-oscuro);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 16px rgba(40, 91, 70, 0.2);
+}
+
+/* =========================================
+   SELECCION DE COLEGIOS
+   ========================================= */
+
+.seleccion {
+    max-width: 1150px;
+    margin: 65px auto;
+    padding: 0 25px;
+}
+
+.etiqueta {
+    color: var(--terracota);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.seleccion h2 {
+    color: var(--verde-oscuro);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.introduccion {
+    color: var(--texto-suave);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.tarjeta {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 28px 22px;
+    text-align: left;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 5px 18px rgba(48, 59, 52, 0.04);
+    transition: all 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(48, 59, 52, 0.10);
+    border-color: var(--beige);
+}
+
+.sigla {
+    background-color: var(--verde-claro);
+    color: var(--verde);
+    padding: 8px 13px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.anio {
+    color: var(--terracota);
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.tarjeta h3 {
+    color: var(--verde-oscuro);
+    font-size: 19px;
+    margin: 12px 0;
+}
+
+.tarjeta p:not(.anio) {
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.tarjeta a {
+    color: var(--verde);
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: auto;
+    transition: color 0.3s;
+}
+
+.tarjeta a:hover {
+    color: var(--terracota);
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 35px;
+    color: var(--terracota);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.volver:hover {
+    color: var(--verde);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 25px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    background-color: var(--blanco);
+    border-top: 1px solid var(--borde);
+}
+
+/* =========================================
+   CAPITULOS DE LOS COLEGIOS
+   ========================================= */
+
+.capitulo {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+.capitulo h2 {
+    color: var(--verde-oscuro);
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.menu-capitulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    border-bottom: 1px solid var(--borde);
+    padding: 18px 0;
+    margin-bottom: 40px;
+}
+
+.menu-capitulo a {
+    color: var(--texto-suave);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.menu-capitulo a.activo,
+.menu-capitulo a:hover {
+    color: var(--terracota);
+    font-weight: bold;
+}
+
+/* PRESENTACION DEL COLEGIO */
+
+.presentacion-colegio {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.anio-destacado {
+    background-color: var(--verde);
+    color: var(--blanco);
+    padding: 45px 30px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.anio-destacado span {
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: var(--beige);
+}
+
+.anio-destacado strong {
+    font-size: 75px;
+    margin: 15px 0;
+}
+
+.anio-destacado p {
+    color: #E5EEE8;
+}
+
+.texto-presentacion {
+    background-color: var(--blanco);
+    padding: 40px;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(48, 59, 52, 0.04);
+}
+
+.texto-presentacion h2 {
+    margin: 12px 0;
+}
+
+.texto-presentacion h3 {
+    color: var(--terracota);
+    margin-bottom: 20px;
+}
+
+.texto-presentacion p:not(.etiqueta) {
+    color: var(--texto-suave);
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* =========================================
+   BLOQUES DE HISTORIA
+   ========================================= */
+
+.bloques-historia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.bloque-historia {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(48, 59, 52, 0.04);
+    transition: transform 0.3s;
+}
+
+.bloque-historia:hover {
+    transform: translateY(-4px);
+}
+
+.bloque-historia h3 {
+    color: var(--verde);
+    margin-bottom: 15px;
+}
+
+.bloque-historia p {
+    color: var(--texto-suave);
+    line-height: 1.8;
+}
+
+.dato-grande {
+    display: block;
+    font-size: 30px;
+    color: var(--terracota);
+    margin-top: 20px;
+}
+
+/* =========================================
+   LINEA DE TIEMPO
+   ========================================= */
+
+.linea-tiempo {
+    margin: 35px 0;
+    border-left: 3px solid var(--beige);
+    padding-left: 30px;
+}
+
+.hito {
+    position: relative;
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 22px;
+    text-align: left;
+    box-shadow: 0 5px 18px rgba(48, 59, 52, 0.04);
+}
+
+.hito::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 30px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--terracota);
+    border: 3px solid var(--crema);
+    border-radius: 50%;
+}
+
+.hito strong {
+    color: var(--terracota);
+    font-size: 26px;
+    min-width: 115px;
+}
+
+.hito h3 {
+    color: var(--verde-oscuro);
+    margin-bottom: 10px;
+}
+
+.hito p {
+    color: var(--texto-suave);
+    line-height: 1.7;
+}
+
+/* =========================================
+   CIERRE DE CADA CAPITULO
+   ========================================= */
+
+.cierre-capitulo {
+    background-color: var(--verde-claro);
+    padding: 40px;
+    border-radius: 14px;
+    margin-top: 35px;
+}
+
+.cierre-capitulo h3 {
+    color: var(--verde);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.cierre-capitulo p {
+    color: var(--texto);
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   NAVEGACION ENTRE PANTALLAS
+   ========================================= */
+
+.navegacion-pantallas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid var(--borde);
+}
+
+.navegacion-pantallas a {
+    color: var(--verde);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navegacion-pantallas a:hover {
+    color: var(--terracota);
+}
+
+/* =========================================
+   PANTALLA FINAL
+   ========================================= */
+
+.pantalla-final {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 18px;
+    padding: 65px 45px;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 850px;
+    box-shadow: 0 10px 30px rgba(48, 59, 52, 0.06);
+}
+
+.pantalla-final h2 {
+    font-size: 40px;
+    color: var(--verde-oscuro);
+    margin: 25px 0;
+}
+
+.mensaje-final {
+    color: var(--texto-suave);
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+.frase-final {
+    background-color: var(--verde-claro);
+    border-radius: 14px;
+    padding: 35px;
+    margin: 35px 0;
+    border-left: 4px solid var(--terracota);
+}
+
+.frase-final h3 {
+    color: var(--verde);
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.frase-final p {
+    color: var(--texto-suave);
+}
+
+.acciones-finales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* =========================================
+   ADAPTACION A TABLETS
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================================
+   ADAPTACION A CELULARES
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px;
+    }
+
+    .marca {
+        text-align: center;
+    }
+
+    .encabezado nav {
+        gap: 20px;
+    }
+
+    .presentacion-colegio {
+        grid-template-columns: 1fr;
+    }
+
+    .bloques-historia {
+        grid-template-columns: 1fr;
+    }
+
+    .capitulo h2 {
+        font-size: 29px;
+    }
+
+    .anio-destacado strong {
+        font-size: 60px;
+    }
+
+    .menu-capitulo {
+        gap: 16px;
+    }
+
+    .hito {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hito strong {
+        font-size: 23px;
+    }
+
+    .navegacion-pantallas {
+        gap: 15px;
+    }
+
+    .pantalla-final {
+        padding: 35px 20px;
+    }
+
+    .pantalla-final h2 {
+        font-size: 30px;
+    }
+
+    .acciones-finales {
+        flex-direction: column;
+    }
+
+}
+
+/* =========================================
+   CELULARES PEQUEÑOS
+   ========================================= */
+
+@media (max-width: 550px) {
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .seleccion h2 {
+        font-size: 31px;
+    }
+
+    .menu-capitulo {
+        justify-content: center;
+    }
+
+    .navegacion-pantallas a {
+        font-size: 13px;
+    }
+
+}
+.imagen-inicio {
+    width: 80%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 18px;
+    margin: 25px auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.imagen-colegio {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 18px;
+    margin: 20px 0;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}

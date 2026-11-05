@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entre Pasillos</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>ENTRE PASILLOS</h1>
+        <p>Nuestra historia, tu comienzo</p>
+    </header>
+
+    <main>
+        <h2>¡Bienvenidos!</h2>
+
+        <p>
+            Un recorrido por la historia de nuestros colegios.
+        </p>
+
+        <img src="imagenes/inicio.jpg" alt="Imagen de Entre Pasillos" class="imagen-inicio">
+
+        <a href="/ir/1" class="boton">
+            Comenzar recorrido
+        </a>
+
+        <p id="mensaje">¡Bienvenidos a Entre Pasillos!</p>
+
+        <button class="boton" onclick="cambiarTexto()">
+            Presioname
+        </button>
+
+    </main>
+
+    <script>
+        function cambiarTexto() {
+            document.getElementById("mensaje").textContent = "¡Gracias por visitar Entre Pasillos!";
+        }
+
+        window.alert("¡Bienvenidos a Entre Pasillos!");
+    </script>
+
+</body>
+
+</html>
